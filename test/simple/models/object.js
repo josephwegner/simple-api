@@ -1,8 +1,10 @@
-var ObjectModel = v0.Model("object", {
+var ObjectModel = {
 	actions: {
 
 	},
 	helpers: {
 
 	}
-})
+};
+
+module.exports = exports = ObjectModel;

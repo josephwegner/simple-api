@@ -1,7 +1,7 @@
-var ObjectController = v0.Controller("object", {
+var ObjectController = {
 	options: {
 		
-	}
+	},
 	routes: {
 		getObjectProperty: {
 			method: "GET",
@@ -53,4 +53,6 @@ var ObjectController = v0.Controller("object", {
 	helpers: {
 
 	}
-})
+};
+
+module.exports = exports = ObjectController;

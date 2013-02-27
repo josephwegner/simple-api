@@ -1,6 +1,6 @@
 var api = require(__dirname + "/../../index.js");
 
-var v0 = new api({
+v0 = new api({
 	prefix: ["api", "v0"],
 	port: 8080,
 	host: "localhost",
@@ -11,3 +11,5 @@ var v0 = new api({
 	logLevel: 1
 });
 
+var ObjectController = v0.Controller("object", require(__dirname + "/controllers/object.js"));
+//var ObjectModel = v0.Model("object", require(__dirname + "/models/object.js"));
