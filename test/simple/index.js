@@ -1,6 +1,6 @@
 var api = require(__dirname + "/../../index.js");
 
-v0 = new api({
+var v0 = new api({
 	prefix: ["api", "v0"],
 	port: 8080,
 	host: "localhost",
@@ -8,7 +8,7 @@ v0 = new api({
 		res.end("fallback");
 		console.log("Fallback Hit");		
 	},
-	logLevel: 1
+	logLevel: 5
 });
 
 var ObjectController = v0.Controller("object", require(__dirname + "/controllers/object.js"));

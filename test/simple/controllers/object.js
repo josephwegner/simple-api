@@ -3,6 +3,10 @@ var ObjectController = {
 		
 	},
 	routes: {
+		getStringy: {
+			method: "GET",
+			pieces: ["stringy", "information"]
+		},
 		getObjectProperty: {
 			method: "GET",
 			pieces: ["property", ":property"] //string case
@@ -18,35 +22,49 @@ var ObjectController = {
 		getByRegexp: {
 			method: "GET",
 			pieces: ["regexp", "[[A-Z0-9]+]regexp"] //regexp case
+		},
+		getMultipleParams: {
+			method: "GET",
+			pieces: ["mixed", ":stringy", "other", "%numerical", "onemore", "*mixed"]
 		}
 	},
 	actions: {
+		getStringy: function(req, res, params) {
+			res.end("stringy");
+		},
 		getObjectProperty: function(req, res, params) {
 			if(typeof(params.property) !== "undefined") {
-				res.end(params.property);
+				res.end("property="+params.property);
 			} else {
-				v0.fourOhFour(res);
+				this.api.fourOhFour(res);
 			}
 		},
 		getById: function(req, res, params) {
 			if(typeof(params.id) !== "undefined") {
-				res.end(params.id);
+				res.end("id="+params.id);
 			} else {
-				v0.fourOhFour(res);
+				this.api.fourOhFour(res);
 			}
 		},
 		getByHash: function(req, res, params) {
 			if(typeof(params.hash) !== "undefined") {
-				res.end(params.hash);
+				res.end("hash="+params.hash);
 			} else {
-				v0.fourOhFour(res);
+				this.api.fourOhFour(res);
 			}
 		},
 		getByRegexp: function(req, res, params) {
 			if(typeof(params.regexp) !== "undefined") {
-				res.end(params.regexp);
+				res.end("regexp="+params.regexp);
 			} else {
-				v0.fourOhFour(res);
+				this.api.fourOhFour(res);
+			}
+		},
+		getMultipleParams: function(req, res, params) {
+			if(typeof(params.stringy) !== "undefined" && typeof(params.numerical) !== "undefined" && typeof(params.mixed) !== "undefined") {
+				res.end("stringy="+params.stringy+"&numerical="+params.numerical+"&mixed="+params.mixed);
+			} else {
+				this.api.fourOhFour(res);
 			}
 		}
 	},
