@@ -13,11 +13,11 @@ var ObjectController = {
 		},
 		getByHash: {
 			method: "GET",
-			pieces: "*hash" //mixed case
+			pieces: ["hash", "*hash"] //mixed case
 		},
 		getByRegexp: {
 			method: "GET",
-			pieces: "[A-Z0-9]regexp" //regexp case
+			pieces: ["regexp", "[[A-Z0-9]+]regexp"] //regexp case
 		}
 	},
 	actions: {
