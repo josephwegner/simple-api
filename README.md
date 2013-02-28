@@ -75,7 +75,7 @@ module.exports = exports = ObjectController;
 
 ### Options
 
-There are no options yet.  See the **Contributing** section for more info on that
+There are no options yet.  See the [Contributing](https://github.com/josephwegner/simple-api#contributing) section for more info on that
 
 ### Routes
 
@@ -221,7 +221,7 @@ Obviously, because you are holding the HTTP request, actions are expected to cal
 
 ## Models
 
-I haven't really finalized my vision of Models yet, so I haven't fully implemented them.  Please see the **Contributing** section to learn more
+I haven't really finalized my vision of Models yet, so I haven't fully implemented them.  Please see the [Contributing](https://github.com/josephwegner/simple-api#contributing) section to learn more
 
 # Contributing
 
