@@ -1,0 +1,33 @@
+{
+	"name": "node-api",
+	"version": "0.0.1",
+	"description": "A Node.js API Scaffolding Library",
+	"keywords": ["node", "api", "scaffolding", "routing", "routes", "controller", "action", "model"],
+	"dependencies": {
+
+	},
+	"devDependencies": {
+		"mocha": "~1.8"
+	},
+	"engines": {
+		"node": "~0.8"
+	},
+	"bugs": {
+		"url": "https://github.com/josephwegner/node-api/issues",
+		"email": "joe@wegnerdesign.com"
+	},
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/josephwegner/node-api"
+	},
+	"contributors": [
+		{
+			"name": "Joe Wegner",
+			"email": "joe@wegnerdesign.com",
+			"url": "http://www.wegnerdesign.com"
+		}
+	]
+}
