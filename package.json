@@ -13,7 +13,7 @@
 		"node": "~0.8"
 	},
 	"bugs": {
-		"url": "https://github.com/josephwegner/node-api/issues",
+		"url": "https://github.com/josephwegner/simple-api/issues",
 		"email": "joe@wegnerdesign.com"
 	},
 	"scripts": {
@@ -21,7 +21,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/josephwegner/node-api"
+		"url": "https://github.com/josephwegner/simple-api"
 	},
 	"contributors": [
 		{
