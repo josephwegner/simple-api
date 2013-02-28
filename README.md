@@ -1,8 +1,9 @@
-Simple-API is an easy-to-use API scaffolding module for Node.js.  It creates a clean M~~V~~C structure for APIs and handles all the URL parsing and routing.
+Simple-API is an easy-to-use API scaffolding module for Node.js.  It creates a clean M ~~V~~ C structure for APIs and handles all the URL parsing and routing.
 
 # Install
-
-`npm install simple-api`
+```
+npm install simple-api
+```
 
 # Usage
 
@@ -21,7 +22,7 @@ var v0 = new api({
 });
 ```
 
-You now have an API running on http://localhost:8080, responding to anything with the prefix [http://localhost:8080/api/v0](/api/v0).  Of course, your API doesn't do anything yet because you haven't built Models or Controllers, but we haven't gotten there yet.  We still have to get through these startup options.
+You now have an API running on http://localhost:8080, responding to anything with the prefix [/api/v0](http://localhost:8080/api/v0).  Of course, your API doesn't do anything yet because you haven't built Models or Controllers, but we haven't gotten there yet.  We still have to get through these startup options.
 
 ### Serving Non-API Requests
 
@@ -47,7 +48,7 @@ var v0 = new api({
 
 The `logLevel` option when starting your server tells Simple-API what amount of logs you want to receive.  The higher the number you provide, the less logs you will receive.  Obviously, high priority logs are paired with high numbers.  
 
-**I've done my best to not go over `4` with any of my logs.  Generally anything more important than that is really an error I should be throwing**
+*I've done my best to not go over `4` with any of my logs.  Generally anything more important than that is really an error I should be throwing*
 
 ## Controllers
 
@@ -101,7 +102,7 @@ The routing mechanism can parse complex data out of portions of the URL to serve
 
 `https://api.twitter.com/user/Joe_Wegner/follow/kwegner`
 
-In that scenario, the API needs to be able to successfully route on dynamic URLs, but also gather than information ("Joe_Wegner" and "kwegner") so it can do work.
+In that scenario, the API needs to be able to successfully route on dynamic URLs, but also gather that information ("Joe_Wegner" and "kwegner") so it can do work.
 
 In order to increase the accuracy of the routes, Simple-API provides 4 match types.
 
@@ -122,6 +123,7 @@ In your route you will choose a match type and then specify a name for that para
 	},
 
 	...
+```
 
 ##### String (:parameter)
 
@@ -191,8 +193,8 @@ Match string parameters by placing a colon ( `[regexp]` )
 
 Actions get called by an associated route, and are called with three parameters:
 	
-- `req`: The [http://nodejs.org/api/http.html#http_class_http_serverrequest](Node.js HTTP Server Request Object)
-- `res`: The [http://nodejs.org/api/http.html#http_class_http_serverresponse](Node.js HTTP Server Response Object)
+- `req`: The [Node.js HTTP Server Request Object](http://nodejs.org/api/http.html#http_class_http_serverrequest)
+- `res`: The [Node.js HTTP Server Response Object](http://nodejs.org/api/http.html#http_class_http_serverresponse)
 - `params`: An object containing any matched params from the URL
 
 Within the context of a controller action, `this` refers to the controller.  That means you can access any of your helper functions using `this.helpers`.  
@@ -231,4 +233,4 @@ As you can see, entire sections of the codebase are currently left out waiting t
 
 # Author
 
-[http://www.twitter.com/Joe_Wegner](@Joe_Wegner) from [http://www.wegnerdesign.com](WegnerDesign).
+[@Joe_Wegner](http://www.twitter.com/Joe_Wegner) from [WegnerDesign](http://www.wegnerdesign.com).
