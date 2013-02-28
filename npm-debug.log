@@ -11,17 +11,17 @@
 10 silly lockFile 3a52ce78- .
 11 verbose lock . /Users/josephwegner/.npm/3a52ce78-.lock
 12 verbose read json package.json
-13 verbose tar pack [ '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz',
+13 verbose tar pack [ '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz',
 13 verbose tar pack   '.' ]
-14 verbose tarball /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz
+14 verbose tarball /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
 15 verbose folder .
 16 info prepublish node-api@0.0.1
-17 silly lockFile e4e295bb-34569-0-5708662497345358-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz
-18 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz /Users/josephwegner/.npm/e4e295bb-34569-0-5708662497345358-tmp-tgz.lock
-19 silly lockFile e4e295bb-34569-0-5708662497345358-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz
-20 verbose tar unpack /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/tmp.tgz
-21 silly lockFile 67646743-34569-0-5708662497345358-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package
-22 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package /Users/josephwegner/.npm/67646743-34569-0-5708662497345358-package.lock
+17 silly lockFile 0d85a4c8-60679-0-4999217533040792-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
+18 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz /Users/josephwegner/.npm/0d85a4c8-60679-0-4999217533040792-tmp-tgz.lock
+19 silly lockFile 0d85a4c8-60679-0-4999217533040792-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
+20 verbose tar unpack /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
+21 silly lockFile 1e545aaf-60679-0-4999217533040792-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
+22 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package /Users/josephwegner/.npm/1e545aaf-60679-0-4999217533040792-package.lock
 23 silly gunzTarPerm modes [ '755', '644' ]
 24 silly gunzTarPerm extractEntry package.json
 25 silly gunzTarPerm extractEntry .npmignore
@@ -34,13 +34,13 @@
 32 silly gunzTarPerm extractEntry test/simple/index.js
 33 silly gunzTarPerm extractEntry test/simple/controllers/object.js
 34 silly gunzTarPerm extractEntry test/simple/models/object.js
-35 verbose read json /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package/package.json
-36 silly lockFile 67646743-34569-0-5708662497345358-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package
-37 verbose from cache /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package/package.json
+35 verbose read json /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package/package.json
+36 silly lockFile 1e545aaf-60679-0-4999217533040792-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
+37 verbose from cache /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package/package.json
 38 verbose tar pack [ '/Users/josephwegner/.npm/node-api/0.0.1/package.tgz',
-38 verbose tar pack   '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package' ]
+38 verbose tar pack   '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package' ]
 39 verbose tarball /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-40 verbose folder /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95844/1362083434569-0.5708662497345358/package
+40 verbose folder /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
 41 silly lockFile b173fcad-r-npm-node-api-0-0-1-package-tgz /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
 42 verbose lock /Users/josephwegner/.npm/node-api/0.0.1/package.tgz /Users/josephwegner/.npm/b173fcad-r-npm-node-api-0-0-1-package-tgz.lock
 43 silly lockFile b173fcad-r-npm-node-api-0-0-1-package-tgz /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
@@ -101,13 +101,13 @@
 71 verbose url raw node-api
 72 verbose url resolving [ 'https://registry.npmjs.org/', './node-api' ]
 73 verbose url resolved https://registry.npmjs.org/node-api
-74 info trying registry request attempt 1 at 14:30:34
+74 info trying registry request attempt 1 at 14:31:00
 75 http PUT https://registry.npmjs.org/node-api
 76 http 409 https://registry.npmjs.org/node-api
 77 verbose url raw node-api
 78 verbose url resolving [ 'https://registry.npmjs.org/', './node-api' ]
 79 verbose url resolved https://registry.npmjs.org/node-api
-80 info trying registry request attempt 1 at 14:30:35
+80 info trying registry request attempt 1 at 14:31:01
 81 http GET https://registry.npmjs.org/node-api
 82 http 200 https://registry.npmjs.org/node-api
 83 error publish fail Cannot publish over existing version.

@@ -1,6 +1,6 @@
 {
 	"name": "node-api",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A Node.js API Scaffolding Library",
 	"keywords": ["node", "api", "scaffolding", "routing", "routes", "controller", "action", "model"],
 	"dependencies": {
