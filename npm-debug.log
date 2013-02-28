@@ -4,24 +4,24 @@
 3 info using node@v0.8.14
 4 verbose publish [ '.' ]
 5 verbose read json /Users/josephwegner/Code/node-api/package.json
-6 warn package.json node-api@0.0.1 No README.md file found!
+6 warn package.json node-api@0.0.2 No README.md file found!
 7 verbose cache add [ '.', null ]
 8 silly cache add name=undefined spec="." args=[".",null]
 9 verbose parsed url { pathname: '.', path: '.', href: '.' }
 10 silly lockFile 3a52ce78- .
 11 verbose lock . /Users/josephwegner/.npm/3a52ce78-.lock
 12 verbose read json package.json
-13 verbose tar pack [ '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz',
+13 verbose tar pack [ '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz',
 13 verbose tar pack   '.' ]
-14 verbose tarball /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
+14 verbose tarball /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz
 15 verbose folder .
-16 info prepublish node-api@0.0.1
-17 silly lockFile 0d85a4c8-60679-0-4999217533040792-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
-18 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz /Users/josephwegner/.npm/0d85a4c8-60679-0-4999217533040792-tmp-tgz.lock
-19 silly lockFile 0d85a4c8-60679-0-4999217533040792-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
-20 verbose tar unpack /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/tmp.tgz
-21 silly lockFile 1e545aaf-60679-0-4999217533040792-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
-22 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package /Users/josephwegner/.npm/1e545aaf-60679-0-4999217533040792-package.lock
+16 info prepublish node-api@0.0.2
+17 silly lockFile 7b5c22dc-93458-0-6654413137584925-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz
+18 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz /Users/josephwegner/.npm/7b5c22dc-93458-0-6654413137584925-tmp-tgz.lock
+19 silly lockFile 7b5c22dc-93458-0-6654413137584925-tmp-tgz /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz
+20 verbose tar unpack /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/tmp.tgz
+21 silly lockFile fcd46f92-93458-0-6654413137584925-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package
+22 verbose lock /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package /Users/josephwegner/.npm/fcd46f92-93458-0-6654413137584925-package.lock
 23 silly gunzTarPerm modes [ '755', '644' ]
 24 silly gunzTarPerm extractEntry package.json
 25 silly gunzTarPerm extractEntry .npmignore
@@ -34,22 +34,22 @@
 32 silly gunzTarPerm extractEntry test/simple/index.js
 33 silly gunzTarPerm extractEntry test/simple/controllers/object.js
 34 silly gunzTarPerm extractEntry test/simple/models/object.js
-35 verbose read json /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package/package.json
-36 silly lockFile 1e545aaf-60679-0-4999217533040792-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
-37 verbose from cache /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package/package.json
-38 verbose tar pack [ '/Users/josephwegner/.npm/node-api/0.0.1/package.tgz',
-38 verbose tar pack   '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package' ]
-39 verbose tarball /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-40 verbose folder /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95848/1362083460679-0.4999217533040792/package
-41 silly lockFile b173fcad-r-npm-node-api-0-0-1-package-tgz /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-42 verbose lock /Users/josephwegner/.npm/node-api/0.0.1/package.tgz /Users/josephwegner/.npm/b173fcad-r-npm-node-api-0-0-1-package-tgz.lock
-43 silly lockFile b173fcad-r-npm-node-api-0-0-1-package-tgz /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-44 silly lockFile cd90ec38-egner-npm-node-api-0-0-1-package /Users/josephwegner/.npm/node-api/0.0.1/package
-45 verbose lock /Users/josephwegner/.npm/node-api/0.0.1/package /Users/josephwegner/.npm/cd90ec38-egner-npm-node-api-0-0-1-package.lock
-46 silly lockFile cd90ec38-egner-npm-node-api-0-0-1-package /Users/josephwegner/.npm/node-api/0.0.1/package
-47 verbose tar unpack /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-48 silly lockFile cd90ec38-egner-npm-node-api-0-0-1-package /Users/josephwegner/.npm/node-api/0.0.1/package
-49 verbose lock /Users/josephwegner/.npm/node-api/0.0.1/package /Users/josephwegner/.npm/cd90ec38-egner-npm-node-api-0-0-1-package.lock
+35 verbose read json /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package/package.json
+36 silly lockFile fcd46f92-93458-0-6654413137584925-package /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package
+37 verbose from cache /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package/package.json
+38 verbose tar pack [ '/Users/josephwegner/.npm/node-api/0.0.2/package.tgz',
+38 verbose tar pack   '/var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package' ]
+39 verbose tarball /Users/josephwegner/.npm/node-api/0.0.2/package.tgz
+40 verbose folder /var/folders/9y/bgfz7x6x6qgcdtb8ykc1jbnc0000gn/T/npm-95861/1362083493458-0.6654413137584925/package
+41 silly lockFile 747909e1-r-npm-node-api-0-0-2-package-tgz /Users/josephwegner/.npm/node-api/0.0.2/package.tgz
+42 verbose lock /Users/josephwegner/.npm/node-api/0.0.2/package.tgz /Users/josephwegner/.npm/747909e1-r-npm-node-api-0-0-2-package-tgz.lock
+43 silly lockFile 747909e1-r-npm-node-api-0-0-2-package-tgz /Users/josephwegner/.npm/node-api/0.0.2/package.tgz
+44 silly lockFile 1be9ac0a-egner-npm-node-api-0-0-2-package /Users/josephwegner/.npm/node-api/0.0.2/package
+45 verbose lock /Users/josephwegner/.npm/node-api/0.0.2/package /Users/josephwegner/.npm/1be9ac0a-egner-npm-node-api-0-0-2-package.lock
+46 silly lockFile 1be9ac0a-egner-npm-node-api-0-0-2-package /Users/josephwegner/.npm/node-api/0.0.2/package
+47 verbose tar unpack /Users/josephwegner/.npm/node-api/0.0.2/package.tgz
+48 silly lockFile 1be9ac0a-egner-npm-node-api-0-0-2-package /Users/josephwegner/.npm/node-api/0.0.2/package
+49 verbose lock /Users/josephwegner/.npm/node-api/0.0.2/package /Users/josephwegner/.npm/1be9ac0a-egner-npm-node-api-0-0-2-package.lock
 50 silly gunzTarPerm modes [ '755', '644' ]
 51 silly gunzTarPerm extractEntry package.json
 52 silly gunzTarPerm extractEntry .npmignore
@@ -62,17 +62,17 @@
 59 silly gunzTarPerm extractEntry test/simple/index.js
 60 silly gunzTarPerm extractEntry test/simple/controllers/object.js
 61 silly gunzTarPerm extractEntry test/simple/models/object.js
-62 verbose read json /Users/josephwegner/.npm/node-api/0.0.1/package/package.json
-63 silly lockFile cd90ec38-egner-npm-node-api-0-0-1-package /Users/josephwegner/.npm/node-api/0.0.1/package
-64 silly shasum updated bytes 4380
-65 info shasum d3fd77f4c8bbf2b4380bb2478cb5ebd5e9e9d683
-65 info shasum /Users/josephwegner/.npm/node-api/0.0.1/package.tgz
-66 verbose from cache /Users/josephwegner/.npm/node-api/0.0.1/package/package.json
-67 verbose chmod /Users/josephwegner/.npm/node-api/0.0.1/package.tgz 644
-68 verbose chown /Users/josephwegner/.npm/node-api/0.0.1/package.tgz [ 501, 20 ]
+62 verbose read json /Users/josephwegner/.npm/node-api/0.0.2/package/package.json
+63 silly lockFile 1be9ac0a-egner-npm-node-api-0-0-2-package /Users/josephwegner/.npm/node-api/0.0.2/package
+64 silly shasum updated bytes 4378
+65 info shasum c7a62f153c3a5741dc298bda586e95939339f932
+65 info shasum /Users/josephwegner/.npm/node-api/0.0.2/package.tgz
+66 verbose from cache /Users/josephwegner/.npm/node-api/0.0.2/package/package.json
+67 verbose chmod /Users/josephwegner/.npm/node-api/0.0.2/package.tgz 644
+68 verbose chown /Users/josephwegner/.npm/node-api/0.0.2/package.tgz [ 501, 20 ]
 69 silly lockFile 3a52ce78- .
 70 silly publish { name: 'node-api',
-70 silly publish   version: '0.0.1',
+70 silly publish   version: '0.0.2',
 70 silly publish   description: 'A Node.js API Scaffolding Library',
 70 silly publish   keywords:
 70 silly publish    [ 'node',
@@ -96,28 +96,52 @@
 70 silly publish        email: 'joe@wegnerdesign.com',
 70 silly publish        url: 'http://www.wegnerdesign.com' } ],
 70 silly publish   readme: 'ERROR: No README.md file found!',
-70 silly publish   _id: 'node-api@0.0.1',
-70 silly publish   dist: { shasum: 'd3fd77f4c8bbf2b4380bb2478cb5ebd5e9e9d683' } }
+70 silly publish   _id: 'node-api@0.0.2',
+70 silly publish   dist: { shasum: 'c7a62f153c3a5741dc298bda586e95939339f932' } }
 71 verbose url raw node-api
 72 verbose url resolving [ 'https://registry.npmjs.org/', './node-api' ]
 73 verbose url resolved https://registry.npmjs.org/node-api
-74 info trying registry request attempt 1 at 14:31:00
+74 info trying registry request attempt 1 at 14:31:33
 75 http PUT https://registry.npmjs.org/node-api
 76 http 409 https://registry.npmjs.org/node-api
 77 verbose url raw node-api
 78 verbose url resolving [ 'https://registry.npmjs.org/', './node-api' ]
 79 verbose url resolved https://registry.npmjs.org/node-api
-80 info trying registry request attempt 1 at 14:31:01
+80 info trying registry request attempt 1 at 14:31:34
 81 http GET https://registry.npmjs.org/node-api
 82 http 200 https://registry.npmjs.org/node-api
-83 error publish fail Cannot publish over existing version.
-83 error publish fail Bump the 'version' field, set the --force flag, or
-83 error publish fail     npm unpublish 'node-api@0.0.1'
-83 error publish fail and try again
-84 error System Darwin 12.2.1
-85 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-86 error cwd /Users/josephwegner/Code/node-api
-87 error node -v v0.8.14
-88 error npm -v 1.1.62
-89 error code EPUBLISHCONFLICT
-90 verbose exit [ 1, true ]
+83 verbose url raw node-api/0.0.2/-tag/latest
+84 verbose url resolving [ 'https://registry.npmjs.org/',
+84 verbose url resolving   './node-api/0.0.2/-tag/latest' ]
+85 verbose url resolved https://registry.npmjs.org/node-api/0.0.2/-tag/latest
+86 info trying registry request attempt 1 at 14:31:35
+87 http PUT https://registry.npmjs.org/node-api/0.0.2/-tag/latest
+88 http 403 https://registry.npmjs.org/node-api/0.0.2/-tag/latest
+89 error publish Error sending version data
+90 error Error: forbidden user: josephwegner not authorized to modify node-api
+90 error Changed: description "Collect Node globals & core APIs under one object." -> "A Node.js API Scaffolding Library"
+90 error Changed: dist-tags.latest "0.0.1" -> "0.0.2"
+90 error Added: versions.0.0.2
+90 error Changed: time.modified "2011-03-11T16:01:23.432Z" -> "2013-02-28T20:31:36.169Z"
+90 error Added: time.0.0.2
+90 error Changed: repository.url "git://github.com/laurie71/node-api.git" -> "https://github.com/josephwegner/node-api": node-api/0.0.2/-tag/latest
+90 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:259:14)
+90 error     at Request.init.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/main.js:120:22)
+90 error     at Request.EventEmitter.emit (events.js:99:17)
+90 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/main.js:648:16)
+90 error     at Request.EventEmitter.emit (events.js:126:20)
+90 error     at IncomingMessage.Request.start.self.req.self.httpModule.request.buffer (/usr/local/lib/node_modules/npm/node_modules/request/main.js:610:14)
+90 error     at IncomingMessage.EventEmitter.emit (events.js:126:20)
+90 error     at IncomingMessage._emitEnd (http.js:366:10)
+90 error     at HTTPParser.parserOnMessageComplete [as onMessageComplete] (http.js:149:23)
+90 error     at CleartextStream.socketOnData [as ondata] (http.js:1367:20)
+91 error If you need help, you may report this log at:
+91 error     <http://github.com/isaacs/npm/issues>
+91 error or email it to:
+91 error     <npm-@googlegroups.com>
+92 error System Darwin 12.2.1
+93 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+94 error cwd /Users/josephwegner/Code/node-api
+95 error node -v v0.8.14
+96 error npm -v 1.1.62
+97 verbose exit [ 1, true ]
