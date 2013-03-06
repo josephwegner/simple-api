@@ -1,10 +1,18 @@
 var http = require('http');
 var assert = require("assert");
+var api;
 
 before(function() {
 	//Start simple API server
-	require(__dirname + "/simple/index.js");
+	api = require(__dirname + "/simple/index.js");
 });
+
+describe("Initializations", function() {
+	it("should set this.app to the HTTP server", function(done) {
+		assert.equal(typeof(api.app), "object");
+		done();
+	})
+})
 
 describe("GET Requests", function() {
 	it("should respond to routes with no parameters", function(done) {

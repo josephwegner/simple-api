@@ -44,6 +44,9 @@ var v0 = new api({
 });
 ```
 
+Also as a convenience, `v0.app` is the [HTTP Server Object](http://nodejs.org/api/http.html#http_class_http_server).
+
+
 ### A Word About Log Levels
 
 The `logLevel` option when starting your server tells Simple-API what amount of logs you want to receive.  The higher the number you provide, the less logs you will receive.  Obviously, high priority logs are paired with high numbers.  
