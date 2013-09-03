@@ -30,6 +30,11 @@ var ObjectController = {
 		testHelperScope: {
 			method: "GET",
 			pieces: ["testHelperScope"]
+
+		},
+		breakBefore: {
+			method : "GET",
+			pieces: ["breakBefore"]
 		}
 	},
 	actions: {
@@ -73,7 +78,8 @@ var ObjectController = {
 		},
 		testHelperScope: function(req, res, params) {
 			res.end(this.helpers.getTheHost());
-		}
+		},
+		breakBefore: function(req, res, params) { } //This will never get called, because of the before hook
 	},
 	helpers: {
 		getTheHost: function() {

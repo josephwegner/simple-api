@@ -47,6 +47,30 @@ var v0 = new api({
 Also as a convenience, `v0.app` is the [HTTP Server Object](http://nodejs.org/api/http.html#http_class_http_server).
 
 
+### Before API Request Hook
+
+Sometimes you might want to run some code before every API request.  Perhaps this is for authentication or session management.  Simple-API has a before hook that will let you run any code, including manipulation of the request and response objects.  It also allows you to abort the API request and go to the fallback option.
+
+The following code will fallback all API requests to the `users` controller.  Returning any value other than `FALSE` will allow simple-api to continue the API call.  
+
+```
+var api = require("simple-api");
+
+var v0 = new api({
+	prefix: ["api", "v0"],
+	port: 8080,
+	host: "localhost",
+	before: function(req, res, controller) {
+		if(controller === "users") {
+			return false;
+		}
+	},
+	host: "localhost",
+	logLevel: 5
+});
+```
+
+
 ### A Word About Log Levels
 
 The `logLevel` option when starting your server tells Simple-API what amount of logs you want to receive.  The higher the number you provide, the less logs you will receive.  Obviously, high priority logs are paired with high numbers.  
