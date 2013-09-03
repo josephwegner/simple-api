@@ -26,6 +26,10 @@ var ObjectController = {
 		getMultipleParams: {
 			method: "GET",
 			pieces: ["mixed", ":stringy", "other", "%numerical", "onemore", "*mixed"]
+		},
+		testHelperScope: {
+			method: "GET",
+			pieces: ["testHelperScope"]
 		}
 	},
 	actions: {
@@ -66,10 +70,15 @@ var ObjectController = {
 			} else {
 				this.api.fourOhFour(res);
 			}
+		},
+		testHelperScope: function(req, res, params) {
+			res.end(this.helpers.getTheHost());
 		}
 	},
 	helpers: {
-
+		getTheHost: function() {
+			return this.api.options.host;
+		}
 	}
 };
 
