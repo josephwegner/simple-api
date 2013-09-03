@@ -54,6 +54,26 @@ describe("GET Requests", function() {
 		
 	});
 
+	it("should respond to routes with GET parameters", function(done) {
+		http.get("http://localhost:8080/api/v0/object/property/teststring?test=test", function(res) {
+
+			assert.equal(res.statusCode, 200);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+				assert.strictEqual(data, "property=teststring");
+				done();	
+			})
+
+		});
+		
+	});
+
 	it("should respond to routes with numerical parameters", function(done) {
 		http.get("http://localhost:8080/api/v0/object/54782", function(res) {
 
@@ -134,6 +154,7 @@ describe("GET Requests", function() {
 		
 	});
 
+
 	it("should run the before hook for all API requests", function(done) {
 		http.get("http://localhost:8080/api/v0/object/breakBefore", function(res) {
 
@@ -146,11 +167,32 @@ describe("GET Requests", function() {
 			});
 
 			res.on('end', function() {
+
 				assert.strictEqual(data, "fallback");
+
+				done();
+			});
+		});
+	});
+});
+
+describe("Controllers", function() {
+	it("should be able to access `this` from helpers", function(done) {
+		http.get("http://localhost:8080/api/v0/object/testHelperScope", function(res) {
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "localhost");
+
 				done();
 			});
 
 		});
 	});
-
 });
