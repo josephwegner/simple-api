@@ -54,6 +54,26 @@ describe("GET Requests", function() {
 		
 	});
 
+	it("should respond to routes with GET parameters", function(done) {
+		http.get("http://localhost:8080/api/v0/object/property/teststring?test=test", function(res) {
+
+			assert.equal(res.statusCode, 200);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+				assert.strictEqual(data, "property=teststring");
+				done();	
+			})
+
+		});
+		
+	});
+
 	it("should respond to routes with numerical parameters", function(done) {
 		http.get("http://localhost:8080/api/v0/object/54782", function(res) {
 
