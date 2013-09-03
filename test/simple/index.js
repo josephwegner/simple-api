@@ -4,9 +4,13 @@ var v0 = new api({
 	prefix: ["api", "v0"],
 	port: 8080,
 	host: "localhost",
+	before: function(req, res, controller) {
+		if(req.url === "/api/v0/object/breakBefore") {
+			return false;
+		}
+	},
 	fallback: function(req, res) {
-		res.end("fallback");
-		console.log("Fallback Hit");		
+		res.end("fallback");	
 	},
 	logLevel: 5
 });
