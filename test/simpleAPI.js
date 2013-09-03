@@ -177,6 +177,24 @@ describe("GET Requests", function() {
 });
 
 describe("Controllers", function() {
+	it("should be able to access the global api object", function(done) {
+		http.get("http://localhost:8080/api/v0/object/testControllerScope", function(res) {
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "localhost");
+
+				done();
+			});
+
+		});
+	})
 	it("should be able to access `this` from helpers", function(done) {
 		http.get("http://localhost:8080/api/v0/object/testHelperScope", function(res) {
 
