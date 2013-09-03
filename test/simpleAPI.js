@@ -134,4 +134,23 @@ describe("GET Requests", function() {
 		
 	});
 
+	it("should run the before hook for all API requests", function(done) {
+		http.get("http://localhost:8080/api/v0/object/breakBefore", function(res) {
+
+			assert.equal(res.statusCode, 200);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+				assert.strictEqual(data, "fallback");
+				done();
+			});
+
+		});
+	});
+
 });

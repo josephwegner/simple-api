@@ -26,6 +26,10 @@ var ObjectController = {
 		getMultipleParams: {
 			method: "GET",
 			pieces: ["mixed", ":stringy", "other", "%numerical", "onemore", "*mixed"]
+		},
+		breakBefore: {
+			method : "GET",
+			pieces: ["breakBefore"]
 		}
 	},
 	actions: {
@@ -66,7 +70,8 @@ var ObjectController = {
 			} else {
 				this.api.fourOhFour(res);
 			}
-		}
+		},
+		breakBefore: function(req, res, params) { } //This will never get called, because of the before hook
 	},
 	helpers: {
 
