@@ -154,6 +154,39 @@ describe("GET Requests", function() {
 		
 	});
 
+	it("should 404 for actions that don't exist", function(done) {
+		http.get("http://localhost:8080/api/v0/object/thisactiondoesntexist", function(res) {
+			assert.equal(res.statusCode, 404);
+			done();
+		});
+	});
+
+	it("should 404 for controllers that don't exist", function(done) {
+		http.get("http://localhost:8080/api/v0/fakeController", function(res) {
+			assert.equal(res.statusCode, 404);
+			done();
+		});
+	});
+
+	it("should fallback for requests that don't match the prefix", function(done) {
+		http.get("http://localhost:8080/notanapirequest", function(res) {
+
+			assert.equal(res.statusCode, 200);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "fallback");
+
+				done();
+			});
+		});
+	});
 
 	it("should run the before hook for all API requests", function(done) {
 		http.get("http://localhost:8080/api/v0/object/breakBefore", function(res) {
@@ -174,6 +207,139 @@ describe("GET Requests", function() {
 			});
 		});
 	});
+});
+
+describe("Convenience Functions", function() {
+
+
+	// 404s
+	it("should send 404s", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/404", function(res) {
+			assert.equal(res.statusCode, 404);
+			done();
+		});
+	});
+
+	it("should send 404s with messages", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/404withMessage", function(res) {
+
+			assert.equal(res.statusCode, 404);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "It's Not Here");
+
+				done();
+			});
+		});
+	});
+
+
+	// 500s
+	it("should handle internal errors", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/500", function(res) {
+			assert.equal(res.statusCode, 500);
+			done();
+		});
+	});
+
+	it("should handle internal errors with messages", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/500withMessage", function(res) {
+
+			assert.equal(res.statusCode, 500);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "You Broke It");
+
+				done();
+			});
+		});
+	});
+
+	it("should handle internal errors with status codes", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/505", function(res) {
+			assert.equal(res.statusCode, 505);
+			done();
+		});
+	});
+
+	it("should handle internal errors with status codes and messages", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/505withMessage", function(res) {
+
+			assert.equal(res.statusCode, 505);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "You Broke It");
+				done();
+			});
+		});
+	});
+
+	//403s
+	it("should handle authentication errors", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/403", function(res) {
+			assert.equal(res.statusCode, 403);
+			done();
+		});
+	});
+
+	it("should handle authentication errors with messages", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/403withMessage", function(res) {
+
+			assert.equal(res.statusCode, 403);
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.strictEqual(data, "Not Permitted");
+
+				done();
+			});
+		});
+	});
+
+
+	// 30*s
+	it("should do temporary redirects", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/301", function(res) {
+			assert.equal(res.statusCode, 301);
+			console.log(res);
+			done();
+		});
+	});
+
+	it("should do permanent redirects", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/302", function(res) {
+			assert.equal(res.statusCode, 302);
+			done();
+		});
+	})
+
 });
 
 describe("Controllers", function() {

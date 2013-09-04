@@ -225,7 +225,7 @@ Actions get called by an associated route, and are called with three parameters:
 - `params`: An object containing any matched params from the URL
 
 Within the context of a controller action, `this` refers to the controller.  That means you can access any of your helper functions using `this.helpers`.  
-You can also access the master API object from `this.api`.  This is helpful for some of the convenience functions available on the master API like `fourOhFour` and `fiveHundred`.
+You can also access the master API object from `this.api`.
 
 Obviously, because you are holding the HTTP request, actions are expected to call `res.end()` to finish the connection.
 

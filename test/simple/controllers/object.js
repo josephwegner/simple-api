@@ -49,35 +49,35 @@ var ObjectController = {
 			if(typeof(params.property) !== "undefined") {
 				res.end("property="+params.property);
 			} else {
-				this.api.fourOhFour(res);
+				this.responses.notAvailable(res);
 			}
 		},
 		getById: function(req, res, params) {
 			if(typeof(params.id) !== "undefined") {
 				res.end("id="+params.id);
 			} else {
-				this.api.fourOhFour(res);
+				this.responses.notAvailable(res);
 			}
 		},
 		getByHash: function(req, res, params) {
 			if(typeof(params.hash) !== "undefined") {
 				res.end("hash="+params.hash);
 			} else {
-				this.api.fourOhFour(res);
+				this.responses.notAvailable(res);
 			}
 		},
 		getByRegexp: function(req, res, params) {
 			if(typeof(params.regexp) !== "undefined") {
 				res.end("regexp="+params.regexp);
 			} else {
-				this.api.fourOhFour(res);
+				this.responses.notAvailable(res);
 			}
 		},
 		getMultipleParams: function(req, res, params) {
 			if(typeof(params.stringy) !== "undefined" && typeof(params.numerical) !== "undefined" && typeof(params.mixed) !== "undefined") {
 				res.end("stringy="+params.stringy+"&numerical="+params.numerical+"&mixed="+params.mixed);
 			} else {
-				this.api.fourOhFour(res);
+				this.responses.notAvailable(res);
 			}
 		},
 		testHelperScope: function(req, res, params) {
