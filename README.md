@@ -116,7 +116,7 @@ A routing entry is formatted as an array, where each element matches one _piece_
 	routes: {
 		myGETControllerAction: {
 			method: "GET",
-			pieces: ["do", "stuff"] //Responds to http://hostname/api/controller/do/stuff
+			path: ["do", "stuff"] //Responds to http://hostname/api/controller/do/stuff
 		}
 	},
 
@@ -152,6 +152,8 @@ In your route you will choose a match type and then specify a name for that para
 	...
 ```
 
+Route paths can be defined either as an array or a string.  If you choose to use an array, each element should represent a piece of the path *(ie: the stuff between the slashes)*.  Each of the examples below will have the path defined both as an array and as a string.
+
 ##### String (:parameter)
 
 Match string parameters by placing a colon ( `:` )
@@ -162,7 +164,8 @@ Match string parameters by placing a colon ( `:` )
 
 	{
 		method: "GET",
-		pieces: [":username", "info"] //Matches http://hostname/api/user/Joe_Wegner/info
+		path: [":username", "info"] //Matches http://hostname/api/user/Joe_Wegner/info
+   //or path: ":username/info"
 	}
 
 	...
@@ -178,7 +181,8 @@ Match string parameters by placing a colon ( `%` )
 
 	{
 		method: "GET",
-		pieces: ["%account_id", "status"] //Matches http://hostname/api/account/834987/status
+		path: ["%account_id", "status"] //Matches http://hostname/api/account/834987/status
+   //or path: "%account_id/status"
 	}
 
 	...
@@ -194,7 +198,8 @@ Match string parameters by placing a colon ( `*` )
 
 	{
 		method: "GET",
-		pieces: ["*hash", "diff"] //Matches http://hostname/api/revision/4d95a875d8c45aa228602a6de42a9c56e5b6a9a8/diff
+		path: ["*hash", "diff"] //Matches http://hostname/api/revision/4d95a875d8c45aa228602a6de42a9c56e5b6a9a8/diff
+   //or path: "*hash/diff"
 	}
 
 	...
@@ -210,7 +215,8 @@ Match string parameters by placing a colon ( `[regexp]` )
 
 	{
 		method: "GET",
-		pieces: ["[[A-Z0-9]+]code", "access"] //Matches http://hostname/api/secret/ABC123/access
+		path: ["[[A-Z0-9]+]code", "access"] //Matches http://hostname/api/secret/ABC123/access
+   //or path: "[[A-Z0-9]+]code/access"
 	}
 
 	...
