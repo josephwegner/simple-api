@@ -252,6 +252,17 @@ Obviously, because you are holding the HTTP request, actions are expected to cal
 	...
 ```
 
+### Convenience Functions
+
+Simple-API defines a number of convenient response functions that are commonly used in APIs.  All of the convience functions can be passed either a string or an object as an optional message; objects will be output as JSON.  Convenience functions are members of the `responses` key on the controller, so can be accessed within an action as `this.responses.response(res, ...);`.  As you can see, the first parameter for each convenience function is the HTTP response object.
+
+- **notAvailable**: Returns a 404 ~ `(res, *message*)`
+- **notAuth**: Returns a 404 ~ `(res, *message*)`
+- **redirect**: Returns a 301/302 ~ `(res, destination, *permanent* (defaults to false)*)`
+- **response**: Abstract response, you define everything ~ `(res, *message*, *statusCode*)`
+
+These convenience functions also exist on the API object under the `responses` key so that you can access them from any event hooks.  They function identically as in controllers, so you would call `v0.responses.respond(res, ...);`.
+
 ## Models
 
 I haven't really finalized my vision of Models yet, so I haven't fully implemented them.  Please see the [Contributing](https://github.com/josephwegner/simple-api#contributing) section to learn more
