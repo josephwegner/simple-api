@@ -62,14 +62,13 @@ var ConvenienceController = {
 			this.responses.internalError(res, 505);
 		},
 		intErrorCodeWithMessage: function(req, res, params) {
-			console.log("Send to int error");
 			this.responses.internalError(res, "You Broke It", 505);
 		},
 		authError: function(req, res, params) {
-			this.responses.notAuth();
+			this.responses.notAuth(res);
 		},
 		authErrorWithMessage: function(req, res, params) {
-			this.responses.notAuth("Not Permitted");
+			this.responses.notAuth(res, "Not Permitted");
 		},
 		tempRedirect: function(req, res, params) {
 			this.responses.redirect(res, "/red");

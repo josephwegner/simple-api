@@ -216,6 +216,7 @@ describe("Convenience Functions", function() {
 	it("should send 404s", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/404", function(res) {
 			assert.equal(res.statusCode, 404);
+			res.on('data', function() {});
 			done();
 		});
 	});
@@ -245,6 +246,7 @@ describe("Convenience Functions", function() {
 	it("should handle internal errors", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/500", function(res) {
 			assert.equal(res.statusCode, 500);
+			res.on('data', function() {});
 			done();
 		});
 	});
@@ -272,6 +274,7 @@ describe("Convenience Functions", function() {
 	it("should handle internal errors with status codes", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/505", function(res) {
 			assert.equal(res.statusCode, 505);
+			res.on('data', function() {});
 			done();
 		});
 	});
@@ -299,6 +302,7 @@ describe("Convenience Functions", function() {
 	it("should handle authentication errors", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/403", function(res) {
 			assert.equal(res.statusCode, 403);
+			res.on('data', function() {});
 			done();
 		});
 	});
@@ -328,7 +332,8 @@ describe("Convenience Functions", function() {
 	it("should do temporary redirects", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/301", function(res) {
 			assert.equal(res.statusCode, 301);
-			console.log(res);
+			assert.equal(res.headers.location, "/red")
+			res.on('data', function() {});
 			done();
 		});
 	});
@@ -336,6 +341,8 @@ describe("Convenience Functions", function() {
 	it("should do permanent redirects", function(done) {
 		http.get("http://localhost:8080/api/v0/convenience/302", function(res) {
 			assert.equal(res.statusCode, 302);
+			assert.equal(res.headers.location, "/red")
+			res.on('data', function() {});
 			done();
 		});
 	})
