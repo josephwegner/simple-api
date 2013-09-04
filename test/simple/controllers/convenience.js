@@ -5,43 +5,43 @@ var ConvenienceController = {
 	routes: {
 		fourOhFour: {
 			method: "GET",
-			pieces: ["404"]
+			path: ["404"]
 		},
 		fourOhFourWithMessage: {
 			method: "GET",
-			pieces: ["404withMessage"]
+			path: ["404withMessage"]
 		},
 		intError: {
 			method: "GET",
-			pieces: ["500"]
+			path: ["500"]
 		},
 		intErrorWithMessage: {
 			method: "GET",
-			pieces: ["500withMessage"]
+			path: ["500withMessage"]
 		},
 		intErrorCode: {
 			method: "GET",
-			pieces: ["505"]
+			path: ["505"]
 		},
 		intErrorCodeWithMessage: {
 			method: "GET",
-			pieces: ["505withMessage"]
+			path: ["505withMessage"]
 		},
 		authError: {
 			method: "GET",
-			pieces: ["403"]
+			path: ["403"]
 		},
 		authErrorWithMessage: {
 			method: "GET",
-			pieces: ["403withMessage"]
+			path: ["403withMessage"]
 		},
 		tempRedirect: {
 			method: "GET",
-			pieces: ["301"]
+			path: ["301"]
 		},
 		permRedirect: {
 			method: "GET",
-			pieces: ["302"]
+			path: ["302"]
 		}
 
 	},
