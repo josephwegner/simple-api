@@ -5,40 +5,40 @@ var ObjectController = {
 	routes: {
 		getStringy: {
 			method: "GET",
-			pieces: ["stringy", "information"]
+			path: ["stringy", "information"]
 		},
 		getObjectProperty: {
 			method: "GET",
-			pieces: ["property", ":property"] //string case
+			path: "/property/:property" //string case
 		},
 		getById: {
 			method: "GET",
-			pieces: ["%id"] //number case
+			path: ["%id"] //number case
 		},
 		getByHash: {
 			method: "GET",
-			pieces: ["hash", "*hash"] //mixed case
+			path: "hash/*hash" //mixed case
 		},
 		getByRegexp: {
 			method: "GET",
-			pieces: ["regexp", "[[A-Z0-9]+]regexp"] //regexp case
+			path: ["regexp", "[[A-Z0-9]+]regexp"] //regexp case
 		},
 		getMultipleParams: {
 			method: "GET",
-			pieces: ["mixed", ":stringy", "other", "%numerical", "onemore", "*mixed"]
+			path: "/mixed/:stringy/other/%numerical/onemore/*mixed"
 		},
 		testHelperScope: {
 			method: "GET",
-			pieces: ["testHelperScope"]
+			path: ["testHelperScope"]
 
 		},
 		testControllerScope: {
 			method: "GET",
-			pieces: ["testControllerScope"]
+			path: "testControllerScope"
 		},
 		breakBefore: {
 			method : "GET",
-			pieces: ["breakBefore"]
+			path: ["breakBefore"]
 		}
 	},
 	actions: {
