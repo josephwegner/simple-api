@@ -1,6 +1,6 @@
 {
 	"name": "simple-api",
-	"version": "0.0.5",
+	"version": "0.1",
 	"description": "A Node.js API Scaffolding Library",
 	"keywords": ["node", "api", "scaffolding", "routing", "routes", "controller", "action", "model"],
 	"dependencies": {

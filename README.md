@@ -1,13 +1,15 @@
+# Simple-API (v0.1)
+
 Simple-API is an easy-to-use API scaffolding module for Node.js.  It creates a clean M ~~V~~ C structure for APIs and handles all the URL parsing and routing.
 
-# Install
+## Install
 ```
 npm install simple-api
 ```
 
-# Usage
+## Usage
 
-## You and Your Server
+### You and Your Server
 
 A very basic API server is incredibly easy to start.
 
@@ -24,7 +26,7 @@ var v0 = new api({
 
 You now have an API running on http://localhost:8080, responding to anything with the prefix [/api/v0](http://localhost:8080/api/v0).  Of course, your API doesn't do anything yet because you haven't built Models or Controllers, but we haven't gotten there yet.  We still have to get through these startup options.
 
-### Serving Non-API Requests
+#### Serving Non-API Requests
 
 Simple-API provides a `fallback` option in the case that your server receives a request that doesn't match the API prefix.  The fallback option defaults to sending a 404 request, but you can override that with anything you want.  Just provide a callback that receives a HTTPRequest and HTTPResponse paramters.
 
@@ -47,7 +49,7 @@ var v0 = new api({
 Also as a convenience, `v0.app` is the [HTTP Server Object](http://nodejs.org/api/http.html#http_class_http_server).
 
 
-### Before API Request Hook
+#### Before API Request Hook
 
 Sometimes you might want to run some code before every API request.  Perhaps this is for authentication or session management.  Simple-API has a before hook that will let you run any code, including manipulation of the request and response objects.  It also allows you to abort the API request and go to the fallback option.
 
@@ -71,13 +73,13 @@ var v0 = new api({
 ```
 
 
-### A Word About Log Levels
+#### A Word About Log Levels
 
 The `logLevel` option when starting your server tells Simple-API what amount of logs you want to receive.  The higher the number you provide, the less logs you will receive.  Obviously, high priority logs are paired with high numbers.  
 
 *I've done my best to not go over `4` with any of my logs.  Generally anything more important than that is really an error I should be throwing*
 
-## Controllers
+### Controllers
 
 This is where stuff gets fun.  Controllers are where you build in all of the routes and actions that will map to what your frontend system's require.  The basic structure of a controller is as follows.
 
@@ -100,11 +102,11 @@ var ObjectController = {
 module.exports = exports = ObjectController;
 ```
 
-### Options
+#### Options
 
 There are no options yet.  See the [Contributing](https://github.com/josephwegner/simple-api#contributing) section for more info on that
 
-### Routes
+#### Routes
 
 A route should map to a single action on a controller.  Additionally, routes are filtered by the request method (GET, PUT, POST, DELETE).  If a user requests a page that doesn't match a route, they will be served a 404.
 
@@ -123,7 +125,7 @@ A routing entry is formatted as an array, where each element matches one _piece_
 	...
 ```
 
-#### Getting Parameters from the URL
+##### Getting Parameters from the URL
 
 The routing mechanism can parse complex data out of portions of the URL to serve as parameters.  For example, on a social network an API endpoint might look like this:
 
@@ -154,7 +156,7 @@ In your route you will choose a match type and then specify a name for that para
 
 Route paths can be defined either as an array or a string.  If you choose to use an array, each element should represent a piece of the path *(ie: the stuff between the slashes)*.  Each of the examples below will have the path defined both as an array and as a string.
 
-##### String (:parameter)
+###### String (:parameter)
 
 Match string parameters by placing a colon ( `:` )
 
@@ -171,7 +173,7 @@ Match string parameters by placing a colon ( `:` )
 	...
 ```
 
-##### Numerical (%parameter)
+###### Numerical (%parameter)
 
 Match string parameters by placing a colon ( `%` )
 
@@ -188,7 +190,7 @@ Match string parameters by placing a colon ( `%` )
 	...
 ```
 
-##### Mixed (*parameter) _AlphaNumeric, including capitals and lowercase_
+###### Mixed (*parameter) _AlphaNumeric, including capitals and lowercase_
 
 Match string parameters by placing a colon ( `*` )
 
@@ -205,7 +207,7 @@ Match string parameters by placing a colon ( `*` )
 	...
 ```
 
-##### RegExp ([[A-Z0-9]+]parameter)
+###### RegExp ([[A-Z0-9]+]parameter)
 
 Match string parameters by placing a colon ( `[regexp]` )
 
@@ -222,7 +224,7 @@ Match string parameters by placing a colon ( `[regexp]` )
 	...
 ```
 
-### Actions
+#### Actions
 
 Actions get called by an associated route, and are called with three parameters:
 	
@@ -252,7 +254,7 @@ Obviously, because you are holding the HTTP request, actions are expected to cal
 	...
 ```
 
-### Convenience Functions
+#### Convenience Functions
 
 Simple-API defines a number of convenient response functions that are commonly used in APIs.  All of the convience functions can be passed either a string or an object as an optional message; objects will be output as JSON.  Convenience functions are members of the `responses` key on the controller, so can be accessed within an action as `this.responses.response(res, ...);`.  As you can see, the first parameter for each convenience function is the HTTP response object.
 
@@ -263,11 +265,11 @@ Simple-API defines a number of convenient response functions that are commonly u
 
 These convenience functions also exist on the API object under the `responses` key so that you can access them from any event hooks.  They function identically as in controllers, so you would call `v0.responses.respond(res, ...);`.
 
-## Models
+### Models
 
 I haven't really finalized my vision of Models yet, so I haven't fully implemented them.  Please see the [Contributing](https://github.com/josephwegner/simple-api#contributing) section to learn more
 
-# Contributing
+## Contributing
 
 **Simple-API is young**.  So far it's only got one developer, which means only one brain feeding into what a great Node.js API Library looks like.
 
@@ -275,6 +277,7 @@ PLEASE contribute.  If that means spending hours churning out code, **awesome**.
 
 As you can see, entire sections of the codebase are currently left out waiting to hear back about real usage (controller options, models, convenience functions, etc.).  I need to hear from you!  Check out the Author section, or drop a note on the issues page.
 
-# Author
+## Thanks
 
-[@Joe_Wegner](http://www.twitter.com/Joe_Wegner) from [WegnerDesign](http://www.wegnerdesign.com).
+- [@Joe_Wegner](http://www.twitter.com/Joe_Wegner) from [WegnerDesign](http://www.wegnerdesign.com).
+- [@jessepollack](http://www.twitter.com/jessepollak) from [Clef](http://getclef.com)
