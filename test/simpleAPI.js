@@ -345,7 +345,29 @@ describe("Convenience Functions", function() {
 			res.on('data', function() {});
 			done();
 		});
-	})
+	});
+
+	// 200
+	it("should get JSON with the correct content type", function(done) {
+		http.get("http://localhost:8080/api/v0/convenience/JSON", function(res) {
+
+			assert.equal(res.statusCode, 200);
+			assert.equal(res.headers['content-type'], "application/json");
+
+			var data = "";
+
+			res.on('data', function(chunk) {
+				data += chunk;
+			});
+
+			res.on('end', function() {
+
+				assert.equal(data, JSON.stringify({hello: "world"}));
+
+				done();
+			});
+		});
+	});
 
 });
 

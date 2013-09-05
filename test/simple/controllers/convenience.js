@@ -42,6 +42,10 @@ var ConvenienceController = {
 		permRedirect: {
 			method: "GET",
 			pieces: ["302"]
+		},
+		getJSON: {
+			method: "GET",
+			pieces: ["JSON"]
 		}
 
 	},
@@ -75,6 +79,9 @@ var ConvenienceController = {
 		},
 		permRedirect: function(req, res, params) {
 			this.responses.redirect(res, "/red", true);
+		},
+		getJSON: function(req, res, params) {
+			this.responses.respond(res, {hello: "world"});
 		}
 	},
 	helpers: {
