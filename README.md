@@ -281,3 +281,6 @@ As you can see, entire sections of the codebase are currently left out waiting t
 
 - [@Joe_Wegner](http://www.twitter.com/Joe_Wegner) from [WegnerDesign](http://www.wegnerdesign.com).
 - [@jessepollack](http://www.twitter.com/jessepollak) from [Clef](http://getclef.com)
+
+## License
+This project is licensed under the [MIT license](http://opensource.org/licenses/MIT).
