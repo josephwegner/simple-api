@@ -1,5 +1,6 @@
 var http = require('http');
 var assert = require("assert");
+var request = require('request');
 var api;
 
 before(function() {
@@ -12,7 +13,23 @@ describe("Initializations", function() {
 		assert.equal(typeof(api.app), "object");
 		done();
 	})
-})
+});
+
+describe("POST Requests", function() {
+	var BASE_URL = 'http://localhost:8080/api/v0/object';
+
+	it("should parse post data", function(done) {
+		var form = { key: 'value' }
+		request.post(
+			BASE_URL + "/post", 
+			{ form: form },
+			function (error, response, body) {
+				assert.deepEqual(form, JSON.parse(body));
+				done();
+			}
+		);
+	})
+});
 
 describe("GET Requests", function() {
 	it("should respond to routes with no parameters", function(done) {

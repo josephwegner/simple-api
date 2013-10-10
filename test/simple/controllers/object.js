@@ -27,6 +27,10 @@ var ObjectController = {
 			method: "GET",
 			path: "/mixed/:stringy/other/%numerical/onemore/*mixed"
 		},
+		postReturn: {
+			method: "POST",
+			path: "/post"
+		},
 		testHelperScope: {
 			method: "GET",
 			path: ["testHelperScope"]
@@ -79,6 +83,9 @@ var ObjectController = {
 			} else {
 				this.responses.notAvailable(res);
 			}
+		},
+		postReturn: function(req, res, params) {
+			res.end(JSON.stringify(req.body));
 		},
 		testHelperScope: function(req, res, params) {
 			res.end(this.helpers.getTheHost());
